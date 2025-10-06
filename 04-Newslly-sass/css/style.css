@@ -56,6 +56,11 @@ img {
   font-weight: bold;
   line-height: 1.2777777778;
 }
+.post__title--border {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
 
 /*card*/
 .card {
@@ -123,6 +128,11 @@ img {
   line-height: 1.2916666667;
   text-transform: uppercase;
 }
+.news__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px 5%;
+}
 
 /*trending*/
 .trending {
@@ -144,5 +154,32 @@ img {
   font-weight: bold;
   line-height: 1.2916666667;
   text-transform: uppercase;
+}
+.trending__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px 5%;
+}
+.trending__item .btn {
+  margin-left: auto;
+}
+
+/*about.html-----------------------*/
+/*blog*/
+.blog {
+  padding: 0 0 60px;
+}
+.blog__inner {
+  max-width: 800px;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.blog__list {
+  display: grid;
+  row-gap: 40px;
+}
+.blog__item .btn {
+  margin-left: auto;
 }
 /*# sourceMappingURL=style.css.map */

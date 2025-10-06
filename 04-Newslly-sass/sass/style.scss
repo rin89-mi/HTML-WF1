@@ -93,6 +93,12 @@ img {
 
     &__title {
         @include title-sub();
+
+        &--border {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
     }
 }
 
@@ -153,6 +159,14 @@ img {
     &__title {
         @include title-main();
     }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr; // repeat(2,1fr);
+        //column-gap: 40px;
+        //row-gap: 60px;
+        gap: 60px percentage(math.div(40, 800));
+    }
 }
 
 /*trending*/
@@ -167,8 +181,46 @@ img {
     &__title {
         @include title-main();
     }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px percentage(math.div(40, 800));
+    }
+
+    &__item {
+        .btn {
+            margin-left: auto;
+        }
+
+        //.post__title {
+        //  border-bottom: 1px solid #ddd;
+        //}　分かりづらい→文字ファイヤーのがいい
+    }
 }
 
+
+
+/*about.html-----------------------*/
+/*blog*/
+.blog {
+    padding: 0 0 60px;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__list {
+        display: grid;
+        row-gap: 40px;
+    }
+
+    &__item {
+        .btn {
+            margin-left: auto;
+        }
+    }
+}
 
 
 
