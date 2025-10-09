@@ -1,0 +1,215 @@
+@use 'sass:math';
+
+$color-text: #31353b;
+$color-main: #ff9900;
+$color-accent: #f85a47;
+$color-heading: #000;
+$color-bg: #dbffff;
+$color-btn: #FFFFFF;
+$color-nav: #FF9900;
+
+$font-family-beas: Helvetica, Arial, sans-serif;
+
+@mixin inner($mw: 1000px, $w: 88%) {
+    max-width: $mw;
+    width: $w;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    color: $color-text;
+    font-size: 15px;
+    font-family: $font-family-beas;
+    line-height: math.div(26, 15);
+    letter-spacing: #{math.div(20,100)}em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+/*ここまでが初期設定ーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+/*common--------------------------*/
+.unit {
+    &__catch {
+        margin-bottom: 20px;
+        color: $color-main;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: math.div(30, 18);
+    }
+
+    &__title {
+        margin-bottom: 40px;
+        color: $color-heading;
+        font-size: 48px;
+        line-height: math.div(58, 48);
+    }
+
+    &__content {
+        margin-bottom: 60px;
+    }
+
+    //要素の中の一番最後の要素の下marginを0にする
+    :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.header {
+    &__inner {
+        @include inner();
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+        margin-bottom: 80px;
+        font-weight: bold;
+    }
+
+}
+
+.btn {
+    color: $color-btn;
+    background-color: $color-accent;
+    padding: 20px 33px 20px 33px;
+    border-radius: 20px;
+    font-weight: bold;
+
+    &__about {
+        color: $color-btn;
+        background-color: $color-main;
+        padding: 20px 33px 20px 33px;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+}
+
+.gnav__list {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 30px;
+}
+
+.gnav__item {
+    &--active {
+        color: $color-nav;
+    }
+}
+
+
+/*index.html-----------------------*/
+/*spaces*/
+.spaces {
+    padding-bottom: 120px;
+
+    &__inner {
+        @include inner();
+        display: grid;
+        grid-template-columns: 500fr 440fr;
+        column-gap: percentage(math.div(1000, 60));
+        align-items: center;
+    }
+
+    &__inner--about {
+        @include inner();
+    }
+
+    &__inner--rast {
+        @include inner();
+        display: grid;
+        grid-template-columns: 440fr 500fr;
+        column-gap: percentage(math.div(60, 1000));
+        align-items: center;
+        margin-top: 120px;
+    }
+}
+
+/*reviews*/
+.reviews {
+    padding-bottom: 120px;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__info {
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 440fr 500fr;
+        column-gap: percentage(math.div(60, 1000));
+    }
+}
+
+
+.footer {
+    &__inner {
+        @include inner();
+    }
+
+    &__copy {
+        text-align: right;
+    }
+}
+
+.fgnav {
+    &__list {
+        text-align: right;
+        display: flex;
+        float: right;
+    }
+
+
+}
+
+
+
+/*about.html*/
+
+.home {
+    &__inner {
+        @include inner();
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 30px;
+    }
+
+    &__pic {
+        margin-bottom: 20px;
+    }
+
+    &__content {
+        margin-bottom: 40px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
