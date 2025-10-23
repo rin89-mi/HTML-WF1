@@ -2,7 +2,8 @@
 
 $bs: (
     "desktop": 640px,
-    "br":500px,
+    "br": 500px,
+    "table": 815px,
 );
 
 $color-text: #404040;
@@ -29,8 +30,8 @@ $font-famly-base: "游ゴシック", "Yu Gothic", Helvetica, Arial, sans-serif;
     padding-bottom: 15px;
     border-bottom: 1px solid #ddd;
     font-size: 18px;
-    line-height: math.div(27, 18);
     font-weight: bold;
+    line-height: math.div(27, 18);
 }
 
 body {
@@ -88,11 +89,11 @@ img {
 
 /* index.html
 -------------------*/
-/*mainvisual*/
+/* mainvisual */
 .mainvisual {
     margin-bottom: 100px;
     padding: 350px 0 120px;
-    background: url(../images/pic_main.png)no-repeat center/cover;
+    background: url(../images/pic_main.png) no-repeat center/cover;
     color: #fff;
 
     &__inner {
@@ -100,11 +101,10 @@ img {
     }
 
     &__title {
-        font-size: 42px;
-        line-height: math.div(60, 42);
-        font-weight: bold;
         margin-bottom: 40px;
-        word-break: keep-all;
+        font-size: 42px;
+        font-weight: bold;
+        line-height: math.div(60, 42);
     }
 
     &__lead {
@@ -113,7 +113,7 @@ img {
     }
 }
 
-/*concept*/
+/* concept */
 .concept {
     padding-bottom: 100px;
 
@@ -136,7 +136,7 @@ img {
     }
 }
 
-/*open*/
+/* open */
 .open {
     padding-bottom: 100px;
 
@@ -149,12 +149,12 @@ img {
     }
 
     &__table {
-        overflow-x: auto; //個々の部分だけをスクロース
+        overflow-x: auto;
 
         table {
             width: 100%;
             min-width: 700px;
-            border-collapse: collapse; //reset.cssが読み込めない場合は明記する
+            border-collapse: collapse; // reset.cssが読み込めない場合は明記する
         }
 
         th {
@@ -167,6 +167,27 @@ img {
             border: 1px solid #707070;
             text-align: center;
         }
+    }
+
+    &__tips {
+        margin-top: 20px;
+
+        @include mq(table) {
+            display: none;
+        }
+    }
+}
+
+/* recruit */
+.recruit {
+    padding-bottom: 100px;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include title-main();
     }
 }
 

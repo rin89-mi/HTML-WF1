@@ -1,0 +1,66 @@
+@charset "UTF-8";
+body {
+  color: #000000;
+  font-size: 14px;
+  font-family: "游ゴシック", "Yu Gothic", Helvetica, Arial, sans-serif;
+  line-height: 2.4285714286;
+  letter-spacing: 0.05em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+/*header*/
+.header {
+  padding: 40px 0 40px 0;
+}
+.header__inner {
+  max-width: 1300px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  color: #2F2F2F;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.gnav__list {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.gnav__item--activ {
+  color: #E40065;
+}
+
+.main__logo {
+  width: 80%;
+}
+
+/*philosophy*/
+.philosophy__title {
+  font-size: 32px;
+  text-align: center;
+}
+.philosophy__title::before {
+  content: "PHILOSOPHY";
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1;
+}
+.philosophy__title::after {
+  content: "";
+}
+/*# sourceMappingURL=style.css.map */
