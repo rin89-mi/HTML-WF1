@@ -49,6 +49,19 @@ img {
     vertical-align: bottom;
 }
 
+.fotter {
+    text-align: left;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__copy {
+        color: #fff;
+        background-color: $color-text;
+    }
+}
+
 
 /*header*/
 .header {
@@ -86,19 +99,112 @@ img {
 }
 
 .main {
-    &__logo {
-        width: 80%;
+    &__photo {
+        &__inner {
+            @include inner();
+        }
+
     }
 }
 
 
 /*philosophy*/
 .philosophy {
+    &__inner {
+        @include inner();
+    }
+
     &__title {
         @include title-main("PHILOSOPHY");
+        margin-top: 80px;
+        font-size: 32px;
+        font-weight: bold;
+        border-bottom: 2px solid $color-activ;
+    }
+
+    &__text {
+        text-align: center;
+
+        p {
+            word-break: keep-all;
+            margin-top: 60px;
+        }
     }
 }
 
+/*works*/
+.works {
+    margin-top: 120px;
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include title-main("WORKS");
+        margin-bottom: 60px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__subtitle {
+        font-size: 18px;
+        margin: 30px 0 20px;
+        font-weight: bold;
+    }
+}
+
+/*voice*/
+.voice {
+    margin-top: 80px;
+    margin-bottom: 60px;
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 80px;
+    }
+
+    &__card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__inner {
+        @include inner();
+    }
+
+    &__title {
+        @include title-main("VOICE");
+    }
+}
+
+/*voice*/
+.voice {
+    &__title {
+        margin-bottom: 60px;
+        border-bottom: 2px solid $color-activ;
+    }
+
+    &__item {
+        background-color: $color-back;
+        border: 2px solid $color-border;
+        border-radius: 20px;
+        padding: 45px 40px;
+    }
+
+    &__profile {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__inner {
+        @include inner();
+    }
+}
 
 
 

@@ -13,6 +13,20 @@ img {
   vertical-align: bottom;
 }
 
+.fotter {
+  text-align: left;
+}
+.fotter__inner {
+  max-width: 1300px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.fotter__copy {
+  color: #fff;
+  background-color: #000000;
+}
+
 /*header*/
 .header {
   padding: 40px 0 40px 0;
@@ -44,14 +58,27 @@ img {
   color: #E40065;
 }
 
-.main__logo {
-  width: 80%;
+.main__photo__inner {
+  max-width: 1300px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*philosophy*/
+.philosophy__inner {
+  max-width: 1300px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
 .philosophy__title {
   font-size: 32px;
   text-align: center;
+  margin-top: 80px;
+  font-size: 32px;
+  font-weight: bold;
+  border-bottom: 2px solid #E40065;
 }
 .philosophy__title::before {
   content: "PHILOSOPHY";
@@ -62,5 +89,104 @@ img {
 }
 .philosophy__title::after {
   content: "";
+}
+.philosophy__text {
+  text-align: center;
+}
+.philosophy__text p {
+  word-break: keep-all;
+  margin-top: 60px;
+}
+
+/*works*/
+.works {
+  margin-top: 120px;
+}
+.works__inner {
+  max-width: 1300px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.works__title {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.works__title::before {
+  content: "WORKS";
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1;
+}
+.works__title::after {
+  content: "";
+}
+.works__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.works__subtitle {
+  font-size: 18px;
+  margin: 30px 0 20px;
+  font-weight: bold;
+}
+
+/*voice*/
+.voice {
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+.voice__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 80px;
+}
+.voice__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.voice__inner {
+  max-width: 1300px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.voice__title {
+  font-size: 32px;
+  text-align: center;
+}
+.voice__title::before {
+  content: "VOICE";
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1;
+}
+.voice__title::after {
+  content: "";
+}
+
+/*voice*/
+.voice__title {
+  margin-bottom: 60px;
+  border-bottom: 2px solid #E40065;
+}
+.voice__item {
+  background-color: #F4F4F4;
+  border: 2px solid #A3A3A3;
+  border-radius: 20px;
+  padding: 45px 40px;
+}
+.voice__profile {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.voice__inner {
+  max-width: 1300px;
+  width: 87.5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*# sourceMappingURL=style.css.map */
